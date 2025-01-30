@@ -45,7 +45,7 @@ const sessionStorageEncKey = '';
 const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
 const COMMON_API = `${commonIP}commonapi-v1.0/`;
 const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
-const TM_API = `${tmIP}hwc-facility-service-v1.0/`;
+const TM_API = `${tmIP}hwc-facility-service/`;
 
 // const TM_API = `${tmIP}tmapi-v1.0/`;
 const MMU_API = `https://${IP}/mmuapi-v1.0/`;
