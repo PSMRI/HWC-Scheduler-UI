@@ -48,10 +48,11 @@ const TM_API = `${tmIP}:8089/`;
 
 // const TM_API = `${tmIP}tmapi-v1.0/`;
 const MMU_API = `http://${IP}:8087/`;
+const sessionStorageEncKey = '';
 
 export const environment = {
   production: false,
-
+  encKey: sessionStorageEncKey,
   app: `TM`,
 
   /**
