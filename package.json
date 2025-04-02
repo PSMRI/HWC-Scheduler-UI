@@ -10,9 +10,9 @@
     "prepare": "husky install",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-dev": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=development --aot",
-    "build-prod": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=production --aot",
-    "build-ci": "chmod +x ./scripts/*.js && ./scripts/ci-prebuild.js && touch src/environments/environment.ts && node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=ci --aot"
+    "build-dev": "(test -f src/environments/environment.ts || touch src/environments/environment.ts) && node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=development --aot",
+    "build-prod": "(test -f src/environments/environment.ts || touch src/environments/environment.ts) && node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=production --aot",
+    "build-ci": "(test -f src/environments/environment.ts || touch src/environments/environment.ts) && chmod +x ./scripts/*.js && ./scripts/ci-prebuild.js && node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --configuration=ci --aot"
   },
   "lint-staged": {
     "src/**/*.{ts,css,html}": [
