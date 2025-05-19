@@ -5,9 +5,9 @@
 	<!-- @Author : Sunil K Sundaram @Date : 21-May-17 @Email : sunil.ks@gmail.com -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.iemr.hwc-scheduler-ui</groupId>
-	<artifactId>HWC-SCHEDULER-UI</artifactId>
-	<version>1.0</version>
-	<name>HWC-SCHEDULER-UI</name>
+	<artifactId>hwc-scheduler-ui</artifactId>
+	<version>3.1.0</version>
+	<name>HWC-Scheduler-UI</name>
 	<description>Piramal - scheduler: Module ui</description>
 	<packaging>war</packaging>
 	<profiles>
@@ -73,7 +73,7 @@
 
 	<!-- install the necessary node_modules & compile in prod mode -->
 	<build>
-		<finalName>hwc-scheduler-ui-v3.0.0</finalName>
+		<finalName>${artifactId}-${version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
