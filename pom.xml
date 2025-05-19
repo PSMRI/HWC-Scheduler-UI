@@ -7,7 +7,7 @@
 	<groupId>com.iemr.hwc-scheduler-ui</groupId>
 	<artifactId>hwc-scheduler-ui</artifactId>
 	<version>3.1.0</version>
-	<name>HWC-SCHEDULER-UI</name>
+	<name>HWC-Scheduler-UI</name>
 	<description>Piramal - scheduler: Module ui</description>
 	<packaging>war</packaging>
 	<profiles>
