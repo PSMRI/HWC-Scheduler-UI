@@ -38,7 +38,7 @@ const schedulerIP = 'https://amritwprdev.piramalswasthya.org/';
 const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
 const COMMON_API = `${commonIP}commonapi-v1.0/`;
 const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
-const TM_API = `${tmIP}aam-facility-service/`;
+const TM_API = `${tmIP}hwc-facility-service/`;
 const sessionStorageEncKey = '';
 
 export const environment = {
