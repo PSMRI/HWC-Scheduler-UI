@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HWC-SCHEDULER-UI": {
+    "AAM-SCHEDULER-UI": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -104,10 +104,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "HWC-SCHEDULER-UI:build:production"
+              "browserTarget": "AAM-SCHEDULER-UI:build:production"
             },
             "development": {
-              "browserTarget": "HWC-SCHEDULER-UI:build:development"
+              "browserTarget": "AAM-SCHEDULER-UI:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -118,7 +118,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "HWC-SCHEDULER-UI:build"
+            "browserTarget": "AAM-SCHEDULER-UI:build"
           }
         },
         "test": {
