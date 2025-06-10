@@ -24,9 +24,9 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-const commonIP = 'https://183.82.107.186:8080/';
-const tmIP = 'https://183.82.107.186:8080/';
-const schedulerIP = 'https://183.82.107.186:8080/';
+const commonIP = 'https://amritwprdev.piramalswasthya.org/';
+const tmIP = 'https://amritwprdev.piramalswasthya.org/';
+const schedulerIP = 'https://amritwprdev.piramalswasthya.org/';
 
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
@@ -39,10 +39,11 @@ const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
 const COMMON_API = `${commonIP}commonapi-v1.0/`;
 const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
 const TM_API = `${tmIP}hwc-facility-service/`;
+const sessionStorageEncKey = '';
 
 export const environment = {
   production: true,
-
+  encKey: sessionStorageEncKey,
   app: `TM`,
 
   /**

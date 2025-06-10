@@ -1,0 +1,3 @@
+<jboss-web>
+  <context-root>/aam-scheduler</context-root>
+</jboss-web>
