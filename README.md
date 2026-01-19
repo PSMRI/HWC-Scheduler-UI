@@ -1,4 +1,6 @@
 # AAM Scheduler UI
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-PSMRI%2FHWC--Scheduler--UI-blue)](https://deepwiki.com/PSMRI/HWC-Scheduler-UI)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
