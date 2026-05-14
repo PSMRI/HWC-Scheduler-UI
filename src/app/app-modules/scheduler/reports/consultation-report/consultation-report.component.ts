@@ -40,7 +40,8 @@ declare global {
   selector: 'app-consultation-report',
   templateUrl: './consultation-report.component.html',
   styleUrls: ['./consultation-report.component.css'],
-})
+
+  standalone: false})
 export class ConsultationReportComponent implements OnInit, DoCheck {
   consultationForm!: FormGroup;
 

@@ -31,7 +31,8 @@ import { NG_VALIDATORS, Validator, AbstractControl } from '@angular/forms';
       multi: true,
     },
   ],
-})
+
+  standalone: false})
 export class myEmailDirective implements Validator {
   pattern =
     /^[0-9a-zA-Z_.]+@[a-zA-Z_]+?\.\b(org|com|in|co.in|ORG|COM|IN|CO.IN)\b$/;

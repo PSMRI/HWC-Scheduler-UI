@@ -23,7 +23,8 @@ import { Directive, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appMyPassword]',
-})
+
+  standalone: false})
 export class myPasswordDirective {
   private passwordValidator(password: any) {
     if (password.match(/^[a-zA-Z]{1,1}[a-zA-Z0-9 $%#@!&^*()+{}[\]-]{7,11}$/)) {

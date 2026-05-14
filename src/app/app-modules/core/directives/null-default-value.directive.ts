@@ -24,7 +24,8 @@ import { NgControl } from '@angular/forms';
 
 @Directive({
   selector: '[appDefaultNull]',
-})
+
+  standalone: false})
 export class NullDefaultValueDirective {
   constructor(
     private el: ElementRef,
@@ -32,9 +33,10 @@ export class NullDefaultValueDirective {
   ) {}
 
   @HostListener('input', ['$event.target'])
-  onEvent(target: HTMLInputElement) {
-    if (this.control && this.control.control) {
-      this.control.control.setValue(target.value === '' ? null : target.value);
+  onEvent(target: EventTarget | null) {
+    const input = target as HTMLInputElement | null;
+    if (this.control.control && input) {
+      this.control.control.setValue(input.value === '' ? null : input.value);
     }
   }
 }

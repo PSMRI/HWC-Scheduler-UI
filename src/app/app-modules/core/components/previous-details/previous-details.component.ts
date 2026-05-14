@@ -30,7 +30,8 @@ import { MatPaginator } from '@angular/material/paginator';
   selector: 'app-previous-details',
   templateUrl: './previous-details.component.html',
   styleUrls: ['./previous-details.component.css'],
-})
+
+  standalone: false})
 export class PreviousDetailsComponent implements OnInit, DoCheck {
   dataList: any = [];
   filteredDataList = new MatTableDataSource<any>();

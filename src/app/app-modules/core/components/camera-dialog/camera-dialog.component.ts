@@ -51,7 +51,8 @@ interface Mark {
   selector: 'app-camera-dialog',
   templateUrl: './camera-dialog.component.html',
   styleUrls: ['./camera-dialog.component.css'],
-})
+
+  standalone: false})
 export class CameraDialogComponent implements OnInit, DoCheck {
   @Output() cancelEvent = new EventEmitter();
 

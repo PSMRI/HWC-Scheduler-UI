@@ -30,7 +30,8 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
   selector: 'app-mystaff',
   templateUrl: './mystaff.component.html',
   styleUrls: ['./mystaff.component.css']
-})
+,
+  standalone: false})
 export class MystaffComponent implements OnInit,DoCheck {
 
   specialistList: any = [];

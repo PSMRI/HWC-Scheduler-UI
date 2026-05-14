@@ -14,7 +14,8 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
   selector: 'app-appointment-view',
   templateUrl: './appointment-view.component.html',
   styleUrls: ['./appointment-view.component.css'],
-})
+
+  standalone: false})
 export class AppointmentViewComponent implements OnInit, OnDestroy, DoCheck {
   languageComponent!: SetLanguageComponent;
   selectedSpecialization: any;

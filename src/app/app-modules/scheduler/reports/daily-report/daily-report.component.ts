@@ -39,7 +39,8 @@ declare global {
   selector: 'app-daily-report',
   templateUrl: './daily-report.component.html',
   styleUrls: ['./daily-report.component.css'],
-})
+
+  standalone: false})
 export class DailyReportComponent implements OnInit, DoCheck {
   dailyReportForm!: FormGroup;
 

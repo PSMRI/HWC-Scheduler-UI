@@ -27,7 +27,8 @@ import { Subscription } from 'rxjs';
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.css'],
-})
+
+  standalone: false})
 export class SpinnerComponent implements OnDestroy, OnInit {
   visible = false;
 

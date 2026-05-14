@@ -23,7 +23,8 @@ import { Directive, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appMyName]',
-})
+
+  standalone: false})
 export class myNameDirective {
   @HostListener('keypress', ['$event']) onKeyPress(ev: any) {
     const regex = new RegExp(/^[0-9 ~!@#$%^&*()_+\-=[]{};':"\\|,.<>\/?]*$/);

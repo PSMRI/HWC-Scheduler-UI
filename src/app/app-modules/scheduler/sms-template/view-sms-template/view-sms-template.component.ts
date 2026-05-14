@@ -31,7 +31,8 @@ import { HttpServiceService } from 'src/app/app-modules/core/services/http-servi
   selector: 'app-view-sms-template',
   templateUrl: './view-sms-template.component.html',
   styleUrls: ['./view-sms-template.component.css']
-})
+,
+  standalone: false})
 export class ViewSmsTemplateComponent implements OnInit, DoCheck {
 
   languageComponent! : SetLanguageComponent;

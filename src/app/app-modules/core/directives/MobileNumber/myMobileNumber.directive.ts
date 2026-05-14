@@ -23,7 +23,8 @@ import { Directive, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appMyMobileNumber]',
-})
+
+  standalone: false})
 export class MyMobileNumberDirective {
   @HostListener('keypress', ['$event']) onKeyPress(ev: any) {
     const regex = new RegExp(/^[a-zA-Z~!@#$%^&*()_+\-=[]{};':"\\|,.<>\/?]*$/);

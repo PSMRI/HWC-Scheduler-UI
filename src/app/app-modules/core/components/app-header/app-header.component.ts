@@ -32,7 +32,8 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
   selector: 'app-header',
   templateUrl: './app-header.component.html',
   styleUrls: ['./app-header.component.css']
-})
+,
+  standalone: false})
 export class AppHeaderComponent implements OnInit, AfterContentChecked {
   @ViewChild('activeTCSpecialist')
   private activeTCSpecialist!: RouterLinkActive;

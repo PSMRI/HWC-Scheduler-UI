@@ -104,10 +104,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AAM-SCHEDULER-UI:build:production"
+              "buildTarget": "AAM-SCHEDULER-UI:build:production"
             },
             "development": {
-              "browserTarget": "AAM-SCHEDULER-UI:build:development"
+              "buildTarget": "AAM-SCHEDULER-UI:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -118,7 +118,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AAM-SCHEDULER-UI:build"
+            "buildTarget": "AAM-SCHEDULER-UI:build"
           }
         },
         "test": {

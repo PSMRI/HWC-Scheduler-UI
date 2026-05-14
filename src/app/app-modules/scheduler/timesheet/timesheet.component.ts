@@ -46,7 +46,8 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
   selector: 'app-timesheet',
   templateUrl: './timesheet.component.html',
   styleUrls: ['./timesheet.component.css'],
-})
+
+  standalone: false})
 export class TimesheetComponent implements OnInit, OnChanges, DoCheck {
   @Input()
   getChangedTab!: boolean;

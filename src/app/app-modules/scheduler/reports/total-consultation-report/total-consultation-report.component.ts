@@ -40,7 +40,8 @@ declare global {
   selector: 'app-total-consultation-report',
   templateUrl: './total-consultation-report.component.html',
   styleUrls: ['./total-consultation-report.component.css'],
-})
+
+  standalone: false})
 export class TotalConsultationReportComponent implements OnInit, DoCheck {
   totalConsultationForm!: FormGroup;
 

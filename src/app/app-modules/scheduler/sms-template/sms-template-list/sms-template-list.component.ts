@@ -32,7 +32,8 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
   selector: 'app-sms-template-list',
   templateUrl: './sms-template-list.component.html',
   styleUrls: ['./sms-template-list.component.css']
-})
+,
+  standalone: false})
 export class SmsTemplateListComponent implements OnInit, DoCheck {
 
   languageComponent!: SetLanguageComponent;

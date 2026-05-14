@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from './services/auth.service';
 import { HttpServiceService } from './services/http-service.service';
 import { LOCALE_ID, ModuleWithProviders, NgModule } from '@angular/core';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { ConfirmationService } from './services/confirmation.service';
 import { SpinnerService } from './services/spinner.service';
@@ -56,7 +56,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { WebcamModule } from 'ngx-webcam';
-import { NgChartsModule } from 'ng2-charts';
+import {
+  BaseChartDirective,
+  provideCharts,
+  withDefaultRegisterables,
+} from 'ng2-charts';
 import { myEmailDirective } from './directives/email/myEmail.directive';
 import { MyMobileNumberDirective } from './directives/MobileNumber/myMobileNumber.directive';
 import { myNameDirective } from './directives/name/myName.directive';
@@ -76,85 +80,78 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 const lang = 'en-US';
-@NgModule({
-  imports: [
-    HttpClientModule,
-    CommonModule,
-    MaterialModule,
-    RouterModule,
-    FormsModule,
-    MatDialogModule,
-    MatMenuModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatTooltipModule,
-    MatPaginatorModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatDatepickerModule,
-    MatListModule,
-    MatSelectModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatGridListModule,
-    WebcamModule,
-    MatSidenavModule,
-    NgChartsModule,
-    NgxMatTimepickerModule.setLocale(lang),
-  ],
-  declarations: [
-    // WebCamComponent,
-    CommonDialogComponent,
-    CameraDialogComponent,
-    TextareaDialogComponent,
-    SpinnerComponent,
-    AppFooterComponent,
-    SetLanguageComponent,
-    AppHeaderComponent,
-    PreviousDetailsComponent,
-    ShowCommitAndVersionDetailsComponent,
-    myEmailDirective,
-    MyMobileNumberDirective,
-    myNameDirective,
-    myPasswordDirective,
-    DisableFormControlDirective,
-    NullDefaultValueDirective,
-    NumberValidatorDirective,
-    StringValidatorDirective 
-  ],
-  exports: [
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule,
-    SetLanguageComponent,
-    CommonDialogComponent,
-    CameraDialogComponent,
-    TextareaDialogComponent,
-    SpinnerComponent,
-    AppFooterComponent,
-    AppHeaderComponent,
-    PreviousDetailsComponent,
-    FullCalendarModule,
-    ShowCommitAndVersionDetailsComponent,
-    myEmailDirective,
-    MyMobileNumberDirective,
-    myNameDirective,
-    myPasswordDirective,
-    myPasswordDirective,
-    DisableFormControlDirective,
-    NullDefaultValueDirective,
-    NumberValidatorDirective,
-    StringValidatorDirective
-    
-  ],
-})
+@NgModule({ declarations: [
+        // WebCamComponent,
+        CommonDialogComponent,
+        CameraDialogComponent,
+        TextareaDialogComponent,
+        SpinnerComponent,
+        AppFooterComponent,
+        SetLanguageComponent,
+        AppHeaderComponent,
+        PreviousDetailsComponent,
+        ShowCommitAndVersionDetailsComponent,
+        myEmailDirective,
+        MyMobileNumberDirective,
+        myNameDirective,
+        myPasswordDirective,
+        DisableFormControlDirective,
+        NullDefaultValueDirective,
+        NumberValidatorDirective,
+        StringValidatorDirective
+    ],
+    exports: [
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MaterialModule,
+        SetLanguageComponent,
+        CommonDialogComponent,
+        CameraDialogComponent,
+        TextareaDialogComponent,
+        SpinnerComponent,
+        AppFooterComponent,
+        AppHeaderComponent,
+        PreviousDetailsComponent,
+        FullCalendarModule,
+        ShowCommitAndVersionDetailsComponent,
+        myEmailDirective,
+        MyMobileNumberDirective,
+        myNameDirective,
+        myPasswordDirective,
+        myPasswordDirective,
+        DisableFormControlDirective,
+        NullDefaultValueDirective,
+        NumberValidatorDirective,
+        StringValidatorDirective
+    ], imports: [CommonModule,
+        MaterialModule,
+        RouterModule,
+        FormsModule,
+        MatDialogModule,
+        MatMenuModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatTooltipModule,
+        MatPaginatorModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCardModule,
+        MatRadioModule,
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatListModule,
+        MatSelectModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatGridListModule,
+        WebcamModule,
+        MatSidenavModule,
+        BaseChartDirective,
+        NgxMatTimepickerModule.setLocale(lang)], providers: [provideHttpClient(withInterceptorsFromDi()), provideCharts(withDefaultRegisterables())] })
 export class CoreModule {
 
   

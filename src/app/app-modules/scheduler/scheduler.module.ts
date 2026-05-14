@@ -25,7 +25,11 @@ import { CoreModule } from '../core/core.module';
 import { SchedulerRoutingModule } from './scheduler-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { MaterialModule } from '../core/material.module';
-import { NgChartsModule } from 'ng2-charts';
+import {
+  BaseChartDirective,
+  provideCharts,
+  withDefaultRegisterables,
+} from 'ng2-charts';
 import { SchedulerService } from './shared/services/scheduler.service';
 import { AppointmentViewComponent } from './appointment-view/appointment-view.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -74,7 +78,7 @@ const lang = 'en-US';
     MatTableModule,
     MaterialModule,
     FullCalendarModule,
-    NgChartsModule,
+    BaseChartDirective,
     MaterialModule,
     RouterModule,
     FormsModule,
@@ -99,7 +103,7 @@ const lang = 'en-US';
     MatProgressSpinnerModule,
     MatGridListModule,
     WebcamModule,
-    NgChartsModule,
+    BaseChartDirective,
     MatSidenavModule,
     MatTabsModule,
     NgxMatTimepickerModule.setLocale(lang),
@@ -123,6 +127,7 @@ const lang = 'en-US';
     DailyReportComponent,
   ],
   providers: [
+    provideCharts(withDefaultRegisterables()),
     SchedulerService,
     { provide: LOCALE_ID, useValue: lang }
   ],

@@ -29,7 +29,8 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
   selector: 'app-specialization-calander-view',
   templateUrl: './specialization-calander-view.component.html',
   styleUrls: ['./specialization-calander-view.component.css']
-})
+,
+  standalone: false})
 export class SpecializationCalanderViewComponent implements OnInit, DoCheck {
   daySlots: any = [];
   eventWithResource: any = [];
